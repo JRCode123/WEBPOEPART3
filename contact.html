@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Bright Minds Tutoring</title>
+  <meta name="description" content="Contact Bright Minds Tutoring for inquiries about our services, pricing, or any other questions.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- ================= HEADER SECTION ================= -->
+  <header>
+    <h1>Contact Us</h1>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="subjects.html">Subjects & Tutors</a> |
+      <a href="booking.html">Book a Session</a> |
+      <a href="resources.html">Resources</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN CONTENT SECTION ================= -->
+  <main>
+    <!-- Contact Information -->
+    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/google_maps_helpful_hero_1.width-2000.format-webp.webp" alt="Location map illustration">
+    
+    <h2>Get in Touch</h2>
+    <p>Email: info@brightmindstutoring.co.za</p>
+    <p>Phone: +27 11 123 4567</p>
+    <p>Address: Johannesburg, South Africa</p>
+    
+    <div>
+      <img src="https://img.freepik.com/premium-photo/contact-us-concept-using-smartphone-businessman-holding-mobile-smartphone-with-icons-mail-phone-email-cutomer-support-concept_174533-2806.jpg" alt="Contact us illustration">
+    </div>
+
+    <!-- Contact Form -->
+    <form id="contact-form">
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required minlength="2"><br><br>
+      
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="phone">Phone Number (optional):</label><br>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number"><br><br>
+      
+      <label for="inquiry-type">Type of Inquiry:</label><br>
+      <select id="inquiry-type" name="inquiry-type" required>
+        <option value="">Select inquiry type</option>
+        <option value="general">General Information</option>
+        <option value="pricing">Pricing</option>
+        <option value="technical">Technical Support</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+      </select><br><br>
+      
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" name="message" rows="5" cols="40" required minlength="10" placeholder="Please provide details about your inquiry..."></textarea><br><br>
+      
+      <input type="submit" value="Send Message">
+    </form>
+    
+    <!-- Contact Confirmation (initially hidden) -->
+    <div id="contact-confirmation" style="display: none;">
+      <h3>Message Sent!</h3>
+      <p>Thank you for contacting Bright Minds Tutoring. We will get back to you as soon as possible.</p>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER SECTION ================= -->
+  <footer>
+    <p>&copy; 2025 Bright Minds Tutoring</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

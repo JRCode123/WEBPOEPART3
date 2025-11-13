@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Session - Bright Minds Tutoring</title>
+  <meta name="description" content="Book a tutoring session with Bright Minds Tutoring. Choose your subject, preferred date, and tutor.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ================= HEADER SECTION ================= -->
+  <header>
+    <h1>Book a Tutoring Session</h1>
+    
+    <!-- Navigation Menu -->
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="subjects.html">Subjects & Tutors</a> |
+      <a href="booking.html">Book a Session</a> |
+      <a href="resources.html">Resources</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN CONTENT SECTION ================= -->
+  <main>
+    <!-- Booking Form -->
+    <h2>Booking Form</h2>
+    <div>
+      <img src="https://legaldbol.com/wp-content/uploads/2019/03/50-Free-Printable-Tutoring-Flyer-Template-Maker-by-Tutoring-Flyer-Template.jpg" alt="Tutoring session booking illustration">
+    </div>
+    
+    <form id="booking-form">
+      <!-- Name Input -->
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required minlength="2"><br><br>
+
+      <!-- Email Input -->
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <!-- Phone Input -->
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number"><br><br>
+
+      <!-- Subject Selection -->
+      <label for="subject">Subject:</label><br>
+      <select id="subject" name="subject" required>
+        <option value="">Select a subject</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Science">Science</option>
+        <option value="English">English</option>
+        <option value="Accounting">Accounting</option>
+        <option value="Other">Other</option>
+      </select><br><br>
+      
+      <!-- If Other selected, show text input -->
+      <div id="other-subject-container" style="display: none;">
+        <label for="other-subject">Please specify:</label><br>
+        <input type="text" id="other-subject" name="other-subject"><br><br>
+      </div>
+
+      <!-- Tutor Selection -->
+      <label for="tutor">Preferred Tutor (optional):</label><br>
+      <select id="tutor" name="tutor">
+        <option value="">No preference</option>
+        <option value="Dr. Nomsa Khumalo">Dr. Nomsa Khumalo</option>
+        <option value="Prof. James van der Merwe">Prof. James van der Merwe</option>
+        <option value="Ms. Lerato Molefe">Ms. Lerato Molefe</option>
+        <option value="Mr. Sipho Dlamini">Mr. Sipho Dlamini</option>
+      </select><br><br>
+
+      <!-- Session Type -->
+      <label>Session Type:</label><br>
+      <input type="radio" id="online" name="session-type" value="online" checked>
+      <label for="online">Online</label>
+      <input type="radio" id="in-person" name="session-type" value="in-person">
+      <label for="in-person">In-Person</label><br><br>
+
+      <!-- Date Input -->
+      <label for="date">Preferred Date:</label><br>
+      <input type="date" id="date" name="date" required><br><br>
+      
+      <!-- Time Input -->
+      <label for="time">Preferred Time:</label><br>
+      <input type="time" id="time" name="time" min="08:00" max="20:00" required><br><br>
+      
+      <!-- Duration -->
+      <label for="duration">Session Duration:</label><br>
+      <select id="duration" name="duration">
+        <option value="60">1 hour</option>
+        <option value="90">1.5 hours</option>
+        <option value="120">2 hours</option>
+      </select><br><br>
+
+      <!-- Additional Notes -->
+      <label for="notes">Additional Notes (optional):</label><br>
+      <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Any specific topics you'd like to focus on?"></textarea><br><br>
+
+      <!-- Submit Button -->
+      <input type="submit" value="Book Now">
+    </form>
+    
+    <!-- Booking Confirmation (initially hidden) -->
+    <div id="booking-confirmation" style="display: none;">
+      <h3>Booking Confirmed!</h3>
+      <p>Thank you for booking a session with Bright Minds Tutoring. We will contact you shortly to confirm your session details.</p>
+      <p>Your session details:</p>
+      <div id="booking-details"></div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER SECTION ================= -->
+  <footer>
+    <p>&copy; 2025 Bright Minds Tutoring</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
